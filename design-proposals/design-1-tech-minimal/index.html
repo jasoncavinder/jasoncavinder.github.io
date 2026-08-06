@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Cavinder | Software Engineer & Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-300">
+
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center border-b border-slate-800">
+        <a href="#" class="text-xl font-bold text-white tracking-tight">Jason Cavinder</a>
+        <div class="space-x-6 text-sm">
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#performance" class="hover:text-white transition">Acting & Comedy</a>
+            <a href="https://www.linkedin.com/in/jason-cavinder/" class="hover:text-white transition" target="_blank">LinkedIn</a>
+        </div>
+    </nav>
+
+    <header class="container mx-auto px-6 py-24 max-w-4xl">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            Building local-first tools and interactive experiences.
+        </h1>
+        <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+            I'm Jason Cavinder—an entrepreneur, software developer, cyber security analyst, and US Veteran based in Honolulu. I build deterministic, safety-first software, and occasionally step on stage for acting and stand-up comedy.
+        </p>
+        <div class="flex space-x-4">
+            <a href="https://github.com/jasoncavinder" class="bg-white text-slate-950 px-6 py-3 rounded-lg font-semibold hover:bg-slate-200 transition">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/jason-cavinder/" class="border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-lg font-semibold transition">Connect on LinkedIn</a>
+        </div>
+    </header>
+
+    <section id="projects" class="container mx-auto px-6 py-16 max-w-5xl">
+        <h2 class="text-3xl font-bold text-white mb-2">Current Projects</h2>
+        <p class="text-slate-400 mb-10">Software ventures and open-source tools I'm actively developing.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Helm (Priority) -->
+            <div class="md:col-span-2 bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-2xl border border-slate-700 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4">
+                    <span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full border border-emerald-500/20">Priority Project</span>
+                </div>
+                <h3 class="text-3xl font-bold text-white mb-3">Helm</h3>
+                <p class="text-slate-300 text-lg mb-6 max-w-2xl">
+                    Native macOS menu bar app that unifies 15+ package managers — Homebrew, npm, pip, Cargo, mise, rustup, and more — into a single safety-first control plane. Built with a Rust core and SwiftUI. Take the helm.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="http://helmapp.dev/" class="text-white font-medium hover:text-emerald-400 flex items-center transition">Website &rarr;</a>
+                    <a href="https://github.com/jasoncavinder/Helm" class="text-slate-400 hover:text-white flex items-center transition">Source Code &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Guilty Party -->
+            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-600 transition">
+                <h3 class="text-2xl font-bold text-white mb-3">Guilty Party</h3>
+                <p class="text-slate-400 mb-6">
+                    A proprietary platform for live, hosted interactive storytelling experiences. Bridging the gap between software platforms and performative events.
+                </p>
+                <a href="https://github.com/jasoncavinder/GuiltyParty" class="text-slate-400 hover:text-white font-medium transition">View on GitHub &rarr;</a>
+            </div>
+
+            <!-- Tilewright -->
+            <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-600 transition">
+                <h3 class="text-2xl font-bold text-white mb-3">Tilewright</h3>
+                <p class="text-slate-400 mb-6">
+                    Evidence-driven Rust toolkit for understanding, validating, and safely transforming tile-based RPG project data. Essential for game developers.
+                </p>
+                <a href="https://github.com/jasoncavinder/tilewright" class="text-slate-400 hover:text-white font-medium transition">View on GitHub &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="performance" class="bg-slate-900 border-y border-slate-800 mt-16">
+        <div class="container mx-auto px-6 py-20 max-w-5xl">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-white mb-4">Stage & Screen</h2>
+                    <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                        Beyond the terminal, I have a passion for the performing arts. Based in Honolulu, I work professionally as an actor with the Kathy Muller Agency and have performed at venues including Diamond Head Theatre, Palikū Theatre, and Manoa Valley Theatre. I also occasionally perform stand-up comedy.
+                    </p>
+                    <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                        This unique blend of rigorous software engineering and creative stage performance shapes how I build products—focusing on both bulletproof architecture and delightful user experiences.
+                    </p>
+                </div>
+                <div class="flex-1 grid grid-cols-2 gap-4">
+                    <div class="bg-slate-800 aspect-square rounded-xl flex items-center justify-center p-6 text-center border border-slate-700">
+                        <span class="font-semibold text-slate-300">Theatrical Acting</span>
+                    </div>
+                    <div class="bg-slate-800 aspect-square rounded-xl flex items-center justify-center p-6 text-center border border-slate-700">
+                        <span class="font-semibold text-slate-300">Stand-up Comedy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container mx-auto px-6 py-12 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Jason Cavinder. All rights reserved.</p>
+        <div class="mt-4 space-x-4">
+            <a href="https://github.com/jasoncavinder" class="hover:text-white">GitHub</a>
+            <a href="https://www.linkedin.com/in/jason-cavinder/" class="hover:text-white">LinkedIn</a>
+            <a href="https://github.com/sponsors/jasoncavinder" class="hover:text-white">Sponsor my work</a>
+        </div>
+    </footer>
+
+</body>
+</html>

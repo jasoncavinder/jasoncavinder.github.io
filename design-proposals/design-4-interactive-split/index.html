@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Cavinder | Two Worlds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        /* Smooth flex expansion for the interactive split */
+        .split-panel {
+            transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.6s ease;
+        }
+        @media (min-width: 768px) {
+            .split-panel:hover {
+                flex: 1.6;
+            }
+            .split-container:hover .split-panel:not(:hover) {
+                flex: 0.8;
+                opacity: 0.7;
+            }
+        }
+        .content-fade {
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .split-panel:not(:hover) .content-fade.expanded-only {
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+        }
+        .split-panel:hover .content-fade.expanded-only {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white antialiased">
+
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center pointer-events-none">
+        <div class="text-2xl font-black tracking-tighter mix-blend-difference pointer-events-auto">JASON CAVINDER</div>
+        <div class="space-x-4 mix-blend-difference pointer-events-auto font-medium">
+            <a href="https://github.com/jasoncavinder" class="hover:underline">GitHub</a>
+            <a href="https://www.linkedin.com/in/jason-cavinder/" class="hover:underline">LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="split-container flex flex-col md:flex-row min-h-screen">
+        
+        <!-- Left Panel: Engineering -->
+        <div class="split-panel flex-1 bg-slate-900 border-r border-slate-800 p-8 md:p-16 flex flex-col justify-center relative overflow-hidden group">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/5 whitespace-nowrap pointer-events-none transition-transform duration-1000 group-hover:scale-110">ENGINEER</div>
+            
+            <div class="relative z-10 max-w-xl">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-emerald-400 font-bold mb-4">The Logic</h2>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Software &<br>Systems.</h1>
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                    Deterministic architecture and safety-first tools. Backed by a career in cybersecurity analysis and military discipline.
+                </p>
+                
+                <div class="content-fade expanded-only space-y-8 hidden md:block">
+                    <div class="group/item">
+                        <a href="http://helmapp.dev/" class="block">
+                            <h3 class="text-2xl font-bold text-white group-hover/item:text-emerald-400 transition-colors">Helm</h3>
+                            <p class="text-slate-400 mt-2 text-sm">Native macOS menu bar control plane for 15+ package managers. Rust & SwiftUI.</p>
+                        </a>
+                    </div>
+                    <div class="group/item">
+                        <a href="https://github.com/jasoncavinder/tilewright" class="block">
+                            <h3 class="text-xl font-bold text-white group-hover/item:text-emerald-400 transition-colors">Tilewright</h3>
+                            <p class="text-slate-400 mt-2 text-sm">Evidence-driven Rust toolkit for RPG project data validation and transformation.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile view projects (always visible on mobile) -->
+                <div class="md:hidden space-y-6 mt-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Helm</h3>
+                        <p class="text-slate-400 text-sm">Native macOS menu bar control plane.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Arts -->
+        <div class="split-panel flex-1 bg-rose-950 p-8 md:p-16 flex flex-col justify-center relative overflow-hidden group">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/5 whitespace-nowrap pointer-events-none transition-transform duration-1000 group-hover:scale-110">ARTIST</div>
+            
+            <div class="relative z-10 max-w-xl md:ml-auto">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-rose-400 font-bold mb-4">The Narrative</h2>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Stage &<br>Story.</h1>
+                <p class="text-rose-200/70 text-lg mb-8 leading-relaxed">
+                    Professional acting, stand-up comedy, and interactive storytelling. Represented by Kathy Muller Agency in Honolulu.
+                </p>
+                
+                <div class="content-fade expanded-only space-y-8 hidden md:block">
+                    <div class="group/item">
+                        <a href="https://github.com/jasoncavinder/GuiltyParty" class="block">
+                            <h3 class="text-2xl font-bold text-white group-hover/item:text-rose-400 transition-colors">Guilty Party</h3>
+                            <p class="text-rose-200/70 mt-2 text-sm">A proprietary platform bridging the gap between software and live hosted interactive storytelling.</p>
+                        </a>
+                    </div>
+                    <div class="group/item">
+                        <h3 class="text-xl font-bold text-white group-hover/item:text-rose-400 transition-colors">Performance</h3>
+                        <p class="text-rose-200/70 mt-2 text-sm">Credits include Diamond Head Theatre, Palikū Theatre, and Manoa Valley Theatre.</p>
+                    </div>
+                </div>
+
+                <!-- Mobile view projects -->
+                <div class="md:hidden space-y-6 mt-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Guilty Party</h3>
+                        <p class="text-rose-200/70 text-sm">Interactive storytelling platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Cavinder | Code & Stage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body { margin: 0; overflow-x: hidden; }
+        
+        .font-terminal { font-family: 'Fira Code', monospace; }
+        .font-theater { font-family: 'Playfair Display', serif; }
+
+        /* Theater Spotlight Effect */
+        .spotlight-bg {
+            background: radial-gradient(circle at 50% 20%, #7f1d1d 0%, #450a0a 40%, #171717 100%);
+        }
+        
+        /* Terminal Cursor */
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="antialiased bg-black text-white">
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+        
+        <!-- THE TERMINAL (Left Side) -->
+        <div class="flex-1 bg-[#0d1117] border-r border-[#30363d] p-8 md:p-16 flex flex-col justify-center relative font-terminal text-[#c9d1d9]">
+            
+            <div class="absolute top-6 left-6 flex space-x-2">
+                <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+            </div>
+
+            <div class="max-w-xl mx-auto w-full">
+                <div class="text-[#7ee787] mb-4 text-sm">jason@hawaii:~$ ./execute_profile.sh</div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white tracking-tight">
+                    Engineer<span class="text-[#7ee787]">.rs</span><span class="cursor-blink">_</span>
+                </h1>
+                
+                <p class="mb-8 text-sm leading-relaxed text-[#8b949e]">
+                    /*<br>
+                    &nbsp;* Building deterministic, safety-first tools.<br>
+                    &nbsp;* Cyber Security background. US Veteran.<br>
+                    &nbsp;*/
+                </p>
+
+                <div class="space-y-6">
+                    <div class="border border-[#30363d] bg-[#161b22] p-4 rounded-md">
+                        <div class="text-[#79c0ff] font-bold mb-1">fn helm() {</div>
+                        <p class="text-sm pl-4 text-[#8b949e]">
+                            // Native macOS menu bar app uniting 15+ package managers.<br>
+                            // Rust core, SwiftUI interface.
+                        </p>
+                        <a href="http://helmapp.dev/" class="text-[#ffa657] text-sm pl-4 hover:underline">-> helmapp.dev</a>
+                        <div class="text-[#79c0ff] font-bold mt-1">}</div>
+                    </div>
+
+                    <div class="border border-[#30363d] bg-[#161b22] p-4 rounded-md">
+                        <div class="text-[#79c0ff] font-bold mb-1">fn tilewright() {</div>
+                        <p class="text-sm pl-4 text-[#8b949e]">
+                            // Evidence-driven Rust toolkit for RPG project data.
+                        </p>
+                        <a href="https://github.com/jasoncavinder/tilewright" class="text-[#ffa657] text-sm pl-4 hover:underline">-> GitHub Repo</a>
+                        <div class="text-[#79c0ff] font-bold mt-1">}</div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-sm text-[#8b949e]">
+                    <a href="https://github.com/jasoncavinder" class="hover:text-white mr-4">GitHub</a>
+                    <a href="https://www.linkedin.com/in/jason-cavinder/" class="hover:text-white">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- THE THEATER (Right Side) -->
+        <div class="flex-1 spotlight-bg p-8 md:p-16 flex flex-col justify-center relative font-theater text-amber-50">
+            
+            <!-- Curtain effect top borders -->
+            <div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-black to-transparent opacity-50"></div>
+
+            <div class="max-w-xl mx-auto w-full text-center md:text-left">
+                <h2 class="italic text-rose-300 text-xl mb-2 tracking-widest uppercase">The Art of Story</h2>
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 drop-shadow-lg">
+                    Performer.
+                </h1>
+
+                <p class="text-lg leading-relaxed mb-10 text-rose-100/80 max-w-md mx-auto md:mx-0">
+                    A professional actor and comedian traversing the stages of Honolulu. Where code demands certainty, the stage thrives on vulnerability.
+                </p>
+
+                <div class="space-y-8">
+                    <div class="relative pl-6 border-l border-rose-500/30">
+                        <h3 class="text-2xl font-bold text-white mb-2">Guilty Party</h3>
+                        <p class="text-rose-200/70 text-sm mb-2">A proprietary platform for live, hosted interactive storytelling experiences. The marriage of technology and theatrical immersion.</p>
+                        <a href="https://github.com/jasoncavinder/GuiltyParty" class="italic text-rose-300 hover:text-white transition-colors text-sm">View Project</a>
+                    </div>
+                    
+                    <div class="relative pl-6 border-l border-rose-500/30">
+                        <h3 class="text-2xl font-bold text-white mb-2">The Stage</h3>
+                        <p class="text-rose-200/70 text-sm">
+                            Represented by Kathy Muller Agency.<br>
+                            Performances at Diamond Head Theatre, Palikū Theatre, and Manoa Valley Theatre.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Centered Name Plate -->
+    <div class="hidden md:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white w-auto px-6 py-3 border border-gray-800 shadow-2xl z-20 items-center justify-center whitespace-nowrap">
+        <span class="font-terminal font-bold tracking-widest text-sm uppercase">Jason Cavinder</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Cavinder | Entrepreneur & Technologist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top bar -->
+    <div class="bg-gray-900 text-gray-300 py-3 px-6 text-sm flex justify-between items-center">
+        <span>Honolulu, HI</span>
+        <div class="space-x-4">
+            <a href="https://github.com/jasoncavinder" class="hover:text-white">GitHub</a>
+            <a href="https://www.linkedin.com/in/jason-cavinder/" class="hover:text-white">LinkedIn</a>
+            <a href="https://github.com/sponsors/jasoncavinder" class="hover:text-white font-semibold text-white">Sponsor</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900 serif tracking-tight">Jason Cavinder</a>
+            <nav class="hidden md:flex space-x-8 text-gray-600 font-semibold">
+                <a href="#about" class="hover:text-gray-900">About</a>
+                <a href="#ventures" class="hover:text-gray-900">Commercial Ventures</a>
+                <a href="#open-source" class="hover:text-gray-900">Open Source</a>
+                <a href="#arts" class="hover:text-gray-900">The Arts</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="container mx-auto px-6 py-20 max-w-4xl text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Building software with discipline. <br> Delivering experiences with impact.
+        </h1>
+        <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+            I am a software engineer, entrepreneur, and veteran specializing in safety-first systems. I am currently bootstrapping multiple software ventures alongside my career as a professional actor.
+        </p>
+        <a href="#ventures" class="bg-gray-900 text-white px-8 py-4 rounded font-bold shadow-lg hover:bg-gray-800 transition">Explore My Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-20 border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-4xl flex flex-col md:flex-row gap-12 items-center">
+            <div class="w-full md:w-1/3">
+                <div class="bg-gray-200 aspect-square rounded-full shadow-inner flex items-center justify-center text-gray-400">
+                    <span class="text-sm uppercase tracking-widest">[ Portrait Here ]</span>
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Background</h2>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    Based in Honolulu, Hawaii, my professional background spans cybersecurity analysis, software engineering, and the United States military. This foundation instills a rigorous, deterministic approach to the software I architect. 
+                </p>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    I am actively building towards the launch of an independent software company to house my proprietary and open-source projects, focusing on tools that respect user agency and system integrity.
+                </p>
+                <a href="https://www.linkedin.com/in/jason-cavinder/" class="text-blue-600 font-bold hover:underline">View my full resume on LinkedIn &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Ventures -->
+    <section id="ventures" class="py-20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Flagship Ventures</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Helm -->
+                <div class="bg-white p-10 rounded-xl shadow-md border border-gray-100 flex flex-col h-full">
+                    <div class="text-sm font-bold uppercase text-blue-600 mb-2">Priority Product</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Helm</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">
+                        A native macOS menu bar application providing a unified, safety-first control plane for over 15 package managers, including Homebrew, npm, pip, and Cargo. Engineered with a Rust core and a SwiftUI frontend.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="http://helmapp.dev/" class="bg-gray-900 text-white px-5 py-2 rounded font-semibold text-sm text-center">Visit Website</a>
+                        <a href="https://github.com/jasoncavinder/Helm" class="bg-gray-100 text-gray-800 hover:bg-gray-200 px-5 py-2 rounded font-semibold text-sm text-center">Source Code</a>
+                    </div>
+                </div>
+
+                <!-- Guilty Party -->
+                <div class="bg-white p-10 rounded-xl shadow-md border border-gray-100 flex flex-col h-full">
+                    <div class="text-sm font-bold uppercase text-purple-600 mb-2">Entertainment Platform</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Guilty Party</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">
+                        A proprietary platform for live, hosted interactive storytelling experiences. It merges software infrastructure with performative storytelling to create scalable, engaging events.
+                    </p>
+                    <a href="https://github.com/jasoncavinder/GuiltyParty" class="bg-gray-100 text-gray-800 hover:bg-gray-200 px-5 py-2 rounded font-semibold text-sm text-center">View Repository</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source / Tilewright -->
+    <section id="open-source" class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-6">Open Source Tooling: Tilewright</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                An evidence-driven Rust toolkit designed for game developers to understand, validate, and safely transform tile-based RPG project data. 
+            </p>
+            <a href="https://github.com/jasoncavinder/tilewright" class="inline-block border-2 border-gray-600 hover:border-white px-8 py-3 rounded font-bold transition">Explore on GitHub</a>
+        </div>
+    </section>
+
+    <!-- Arts -->
+    <section id="arts" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">The Arts</h2>
+            <p class="text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                My career is balanced by a deep involvement in the performing arts. Represented by the Kathy Muller Agency, I am a professional actor with credits at Diamond Head Theatre, Palikū Theatre, and Manoa Valley Theatre. I also write and perform stand-up comedy, bringing a unique perspective to my technical endeavors.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 py-8 text-center text-gray-500 text-sm border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Jason Cavinder. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

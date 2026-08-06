@@ -1,175 +1,389 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags (SEO Optimization) -->
+    <title>Jason Cavinder | Software Engineer & Actor | Honolulu, HI</title>
+    <meta name="title" content="Jason Cavinder | Software Engineer & Actor | Honolulu, HI">
+    <meta name="description" content="Portfolio of Jason Cavinder: Software Engineer, Cyber Security Analyst, US Veteran, and Professional Actor based in Honolulu, Hawaii. Specializing in Rust, macOS tools, and interactive storytelling.">
+    <meta name="keywords" content="Jason Cavinder, Software Engineer, Honolulu, Hawaii, Actor, Rust Developer, Cyber Security, Veteran, Helm app, Tilewright, Guilty Party">
+    <meta name="author" content="Jason Cavinder">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jasoncavinder.github.io/">
+    <meta property="og:title" content="Jason Cavinder | Software Engineer & Actor">
+    <meta property="og:description" content="Portfolio of Jason Cavinder: Software Engineer, Cyber Security Analyst, US Veteran, and Professional Actor based in Honolulu, Hawaii.">
+    <meta property="og:image" content="https://github.com/jasoncavinder.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jasoncavinder.github.io/">
+    <meta property="twitter:title" content="Jason Cavinder | Software Engineer & Actor">
+    <meta property="twitter:description" content="Portfolio of Jason Cavinder: Software Engineer, Cyber Security Analyst, US Veteran, and Professional Actor based in Honolulu, Hawaii.">
+    <meta property="twitter:image" content="https://github.com/jasoncavinder.png">
+
+    <!-- JSON-LD Schema (Crucial for disambiguating from the Ohio lawyer) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jason Cavinder",
+      "url": "https://jasoncavinder.github.io/",
+      "image": "https://github.com/jasoncavinder.png",
+      "jobTitle": "Software Engineer & Actor",
+      "homeLocation": {
+        "@type": "Place",
+        "addressLocality": "Honolulu",
+        "addressRegion": "HI",
+        "addressCountry": "US"
+      },
+      "alumniOf": "Western Governors University",
+      "sameAs": [
+        "https://github.com/jasoncavinder",
+        "https://www.linkedin.com/in/jason-cavinder/",
+        "https://x.com/jasoncavinder",
+        "https://www.instagram.com/jason_the_boat_guy/"
+      ],
+      "knowsAbout": ["Software Engineering", "Rust", "SwiftUI", "Cyber Security", "Acting", "Stand-up Comedy"],
+      "description": "Software Engineer, Cyber Security Analyst, US Veteran, and Professional Actor based in Honolulu, Hawaii."
     }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body { margin: 0; overflow-x: hidden; background-color: #0d1117; }
+        
+        .font-terminal { font-family: 'Fira Code', monospace; }
+        .font-theater { font-family: 'Playfair Display', serif; }
+
+        /* Theater Spotlight Effect */
+        .spotlight-bg {
+            background: radial-gradient(circle at 50% 20%, #7f1d1d 0%, #450a0a 40%, #171717 100%);
+        }
+        
+        /* Terminal Cursor */
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Update Log Target Highlight */
+        article:target {
+            animation: highlight 2s ease-out;
+        }
+        @keyframes highlight {
+            0% { background-color: rgba(126, 231, 135, 0.1); border-color: #7ee787; }
+            100% { background-color: transparent; border-color: #30363d; }
+        }
+
+        /* Accessibility Focus Outlines */
+        :focus-visible {
+            outline: 2px solid #7ee787;
+            outline-offset: 4px;
+        }
+    </style>
 </head>
-<body>
-<h1 id="coming-soon">Coming Soon</h1>
-<p>(November 24, 2024)</p>
+<body class="antialiased text-white selection:bg-[#79c0ff] selection:text-[#0d1117]">
+
+    <!-- Skip to main content (A11y) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#7ee787] text-black px-4 py-2 rounded z-[100] font-terminal font-bold">
+        Skip to main content
+    </a>
+
+    <!-- Mobile Header -->
+    <header class="md:hidden bg-[#0d1117] text-white flex items-center justify-center gap-3 py-3 border-b border-[#30363d] sticky top-0 z-50">
+        <img src="https://github.com/jasoncavinder.png" alt="Jason Cavinder Avatar" class="w-8 h-8 rounded-full grayscale border border-[#30363d]">
+        <span class="font-terminal uppercase tracking-widest text-sm font-bold">Jason Cavinder</span>
+    </header>
+
+    <!-- HERO SECTION (Full Screen) -->
+    <div class="flex flex-col md:flex-row h-screen relative">
+        
+        <!-- THE TERMINAL (Left Side) -->
+        <section class="flex-1 bg-[#0d1117] border-b md:border-b-0 md:border-r border-[#30363d] p-8 md:p-16 flex flex-col justify-center relative font-terminal text-[#c9d1d9]" aria-label="Software Engineering Portfolio">
+            <div class="hidden md:flex absolute top-6 left-6 space-x-2" aria-hidden="true">
+                <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+            </div>
+
+            <div class="max-w-xl mx-auto w-full">
+                <div class="text-[#7ee787] mb-4 text-sm break-all" aria-hidden="true">jason@honolulu:~$ ./execute_profile.sh</div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-8 text-white tracking-tight">
+                    Engineer<span class="text-[#7ee787]" aria-hidden="true">.rs</span><span class="cursor-blink" aria-hidden="true">_</span>
+                </h1>
+                
+                <p class="mb-8 text-sm md:text-base leading-relaxed text-[#8b949e]">
+                    <span aria-hidden="true">/*</span><br>
+                    <span aria-hidden="true">&nbsp;*</span> Building deterministic, safety-first tools.<br>
+                    <span aria-hidden="true">&nbsp;*</span> Cyber Security background. US Veteran.<br>
+                    <span aria-hidden="true">&nbsp;*/</span>
+                </p>
+
+                <nav class="space-y-6" aria-label="Engineering Projects">
+                    <a href="#helm-details" class="block border border-[#30363d] bg-[#161b22] p-5 rounded-md shadow-sm transition-transform hover:-translate-y-1 duration-300 group">
+                        <div class="text-[#79c0ff] font-bold mb-1" aria-hidden="true">fn helm() {</div>
+                        <p class="text-sm pl-4 text-[#8b949e] mb-2 group-hover:text-[#c9d1d9] transition-colors">
+                            <span aria-hidden="true">//</span> Native macOS menu bar app uniting 15+ package managers.
+                        </p>
+                        <div class="text-[#79c0ff] font-bold mt-2" aria-hidden="true">}</div>
+                    </a>
+
+                    <a href="#tilewright-details" class="block border border-[#30363d] bg-[#161b22] p-5 rounded-md shadow-sm transition-transform hover:-translate-y-1 duration-300 group">
+                        <div class="text-[#79c0ff] font-bold mb-1" aria-hidden="true">fn tilewright() {</div>
+                        <p class="text-sm pl-4 text-[#8b949e] mb-2 group-hover:text-[#c9d1d9] transition-colors">
+                            <span aria-hidden="true">//</span> Evidence-driven Rust toolkit for RPG project data.
+                        </p>
+                        <div class="text-[#79c0ff] font-bold mt-2" aria-hidden="true">}</div>
+                    </a>
+                </nav>
+
+                <!-- Terminal Social Links -->
+                <div class="mt-12 text-sm text-[#8b949e] flex flex-wrap gap-x-6 gap-y-3">
+                    <a href="https://github.com/jasoncavinder" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/jason-cavinder/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+                    <a href="https://x.com/jasoncavinder" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">X (Twitter)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE THEATER (Right Side) -->
+        <section class="flex-1 spotlight-bg p-8 md:p-16 flex flex-col justify-center relative font-theater text-amber-50 shadow-inner" aria-label="Theatrical Portfolio">
+            <div class="absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-black/80 to-transparent opacity-80 pointer-events-none" aria-hidden="true"></div>
+
+            <div class="max-w-xl mx-auto w-full text-center md:text-left z-10">
+                <h2 class="italic text-rose-300 text-xl md:text-2xl mb-2 tracking-widest uppercase opacity-90">The Art of Story</h2>
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 drop-shadow-2xl tracking-tight">
+                    Performer.
+                </h1>
+
+                <p class="text-lg leading-relaxed mb-10 text-rose-100/90 max-w-md mx-auto md:mx-0 drop-shadow">
+                    A professional actor and comedian traversing the stages of Honolulu. Where code demands certainty, the stage thrives on vulnerability.
+                </p>
+
+                <nav class="space-y-8 text-left" aria-label="Theatrical Projects">
+                    <a href="#guiltyparty-details" class="block relative pl-6 border-l-2 border-rose-500/50 hover:border-rose-400 transition-colors group cursor-pointer">
+                        <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md group-hover:text-rose-200 transition-colors">Guilty Party</h3>
+                        <p class="text-rose-200/80 text-base leading-relaxed">A proprietary platform for live, hosted interactive storytelling experiences.</p>
+                    </a>
+                    
+                    <a href="#stage-details" class="block relative pl-6 border-l-2 border-rose-500/50 hover:border-rose-400 transition-colors group cursor-pointer">
+                        <h3 class="text-2xl font-bold text-white mb-2 drop-shadow-md group-hover:text-rose-200 transition-colors">The Stage</h3>
+                        <p class="text-rose-200/80 text-base leading-relaxed">
+                            Represented by Kathy Muller Agency. Diamond Head Theatre, Palikū Theatre, and Manoa Valley Theatre.
+                        </p>
+                    </a>
+                </nav>
+
+                <!-- Theater Social Links -->
+                <div class="mt-12 text-sm text-rose-200/60 font-terminal uppercase tracking-widest flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-3 relative z-10">
+                    <a href="https://www.instagram.com/jason_the_boat_guy/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Instagram</a>
+                    <a href="https://x.com/jasoncavinder" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">X (Twitter)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Centered Name Plate with Avatar (Desktop) -->
+        <div class="hidden md:flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#0d1117] flex-col items-center gap-3 px-8 py-6 border border-[#30363d] rounded-lg shadow-2xl z-20 whitespace-nowrap transition-transform hover:scale-105 duration-500 group">
+            <img src="https://github.com/jasoncavinder.png" alt="Jason Cavinder Headshot" class="w-20 h-20 rounded-full border-2 border-[#161b22] shadow-inner grayscale group-hover:grayscale-0 transition-all duration-500 object-cover">
+            <span class="font-terminal font-bold tracking-widest text-sm uppercase bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Jason Cavinder</span>
+            
+            <!-- Central Social Icons -->
+            <div class="flex gap-4 mt-2">
+                <a href="https://github.com/jasoncavinder" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-[#8b949e] hover:text-white transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/jason-cavinder/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-[#8b949e] hover:text-white transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://x.com/jasoncavinder" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) Profile" class="text-[#8b949e] hover:text-white transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/jason_the_boat_guy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="text-[#8b949e] hover:text-white transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#main-content" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 text-[#8b949e] hover:text-white transition-colors animate-bounce" aria-label="Scroll down to detailed project descriptions">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </a>
+
+    </div>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main id="main-content" class="bg-[#0d1117] border-t border-[#30363d] relative z-10 pt-24 pb-32">
+        
+        <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-20">
+            
+            <!-- Left Column: Details -->
+            <div class="lg:w-2/3 space-y-32">
+                
+                <!-- HELM -->
+                <section id="helm-details" class="scroll-mt-32" aria-labelledby="helm-heading">
+                    <div class="text-[#7ee787] font-terminal text-sm mb-3" aria-hidden="true">// PRIORITY_PROJECT</div>
+                    <h2 id="helm-heading" class="text-4xl font-bold text-white mb-6 font-terminal">Helm</h2>
+                    <div class="text-[#c9d1d9] leading-relaxed space-y-4 text-lg">
+                        <p>
+                            Helm is a native macOS menu bar app that serves as a unified, safety-first control plane for your development environment. It brings over 15 package managers—including Homebrew, npm, pip, Cargo, mise, and rustup—under one roof.
+                        </p>
+                        <p>
+                            Drawing from my cybersecurity and military background, Helm is built entirely on the premise of deterministic behavior. It never runs blind automated updates in the background. Instead, it provides total visibility into what is installed, what needs updating, and safely executes those changes only when you command it to.
+                        </p>
+                        <p>
+                            It features a highly optimized Rust core for secure, rapid state execution, paired with a modern SwiftUI frontend for a flawless, native Mac user experience.
+                        </p>
+                    </div>
+                    <div class="mt-8 flex flex-wrap gap-4 font-terminal text-sm">
+                        <a href="http://helmapp.dev/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#161b22] border border-[#30363d] hover:border-[#79c0ff] text-[#79c0ff] rounded transition-colors text-center">Visit helmapp.dev</a>
+                        <a href="https://github.com/jasoncavinder/Helm" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-[#30363d] hover:bg-[#161b22] text-[#c9d1d9] rounded transition-colors text-center">View GitHub Repository</a>
+                    </div>
+                </section>
+
+                <!-- GUILTY PARTY -->
+                <section id="guiltyparty-details" class="scroll-mt-32" aria-labelledby="gp-heading">
+                    <div class="text-rose-400 font-theater italic text-xl mb-2" aria-hidden="true">The Intersection</div>
+                    <h2 id="gp-heading" class="text-4xl font-bold text-white mb-6 font-theater tracking-wide">Guilty Party</h2>
+                    <div class="text-rose-100/90 leading-relaxed space-y-4 text-lg font-theater">
+                        <p>
+                            Guilty Party is a proprietary platform designed to power live, hosted interactive storytelling experiences. It is the direct synthesis of my two professional lives: software architecture and theatrical performance.
+                        </p>
+                        <p>
+                            Traditional live events often struggle to scale interactivity without losing the human element. Guilty Party bridges this gap by providing robust backend systems to track audience choices, manage narrative state, and coordinate actors, allowing the story to fluidly adapt to the audience in real-time.
+                        </p>
+                    </div>
+                    <div class="mt-8 font-terminal text-sm">
+                        <a href="https://github.com/jasoncavinder/GuiltyParty" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 border border-rose-900 hover:bg-rose-950/30 text-rose-300 rounded transition-colors text-center">View Project Repository</a>
+                    </div>
+                </section>
+
+                <!-- TILEWRIGHT -->
+                <section id="tilewright-details" class="scroll-mt-32" aria-labelledby="tilewright-heading">
+                    <div class="text-[#7ee787] font-terminal text-sm mb-3" aria-hidden="true">// OPEN_SOURCE_TOOLING</div>
+                    <h2 id="tilewright-heading" class="text-4xl font-bold text-white mb-6 font-terminal">Tilewright</h2>
+                    <div class="text-[#c9d1d9] leading-relaxed space-y-4 text-lg">
+                        <p>
+                            Tilewright is an evidence-driven Rust toolkit engineered specifically for game developers. It provides robust mechanisms for understanding, validating, and safely transforming tile-based RPG project data.
+                        </p>
+                        <p>
+                            Game data integrity is often a fragile pipeline. Tilewright applies strict validation rules and type-safe transformations, ensuring that external modifications to game assets and configuration files are safe, predictable, and structurally sound before they ever reach the game engine.
+                        </p>
+                    </div>
+                    <div class="mt-8 font-terminal text-sm">
+                        <a href="https://github.com/jasoncavinder/tilewright" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 border border-[#30363d] hover:bg-[#161b22] hover:border-[#7ee787] text-[#7ee787] rounded transition-colors text-center">View GitHub Repository</a>
+                    </div>
+                </section>
+
+                <!-- THE STAGE -->
+                <section id="stage-details" class="scroll-mt-32" aria-labelledby="stage-heading">
+                    <div class="text-rose-400 font-theater italic text-xl mb-2" aria-hidden="true">Performance</div>
+                    <h2 id="stage-heading" class="text-4xl font-bold text-white mb-6 font-theater tracking-wide">Stage & Comedy</h2>
+                    <div class="text-rose-100/90 leading-relaxed space-y-4 text-lg font-theater">
+                        <p>
+                            Based in Honolulu, Hawaii, I am currently represented by the <strong>Kathy Muller Agency</strong>. My acting career spans various mediums, and I have had the privilege of performing at esteemed venues including <em>Diamond Head Theatre</em>, <em>Palikū Theatre</em>, and <em>Manoa Valley Theatre</em>.
+                        </p>
+                        <p>
+                            Beyond scripted theater, I write and perform stand-up comedy. Comedy demands an immediate, iterative feedback loop with the audience—a skill that translates surprisingly well to understanding user experience and product development in software.
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column: Updates Log -->
+            <aside class="lg:w-1/3" aria-label="Development Updates and Logs">
+                <div class="sticky top-24 bg-[#0d1117]/80 backdrop-blur-md p-6 rounded-xl border border-[#30363d]">
+                    <div class="flex items-center justify-between mb-8">
+                        <h2 class="text-2xl font-terminal font-bold text-white">./updates.log</h2>
+                        <span class="flex h-3 w-3 relative" aria-hidden="true">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7ee787] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-[#27c93f]"></span>
+                        </span>
+                    </div>
+
+                    <!-- Timeline Container -->
+                    <div class="space-y-8">
+                        
+                        <!-- Update Item 1 -->
+                        <article id="log-2026-08-06" class="relative pl-6 border-l border-[#30363d] group transition-colors p-2 -ml-2 rounded-r-md">
+                            <div class="absolute w-2.5 h-2.5 bg-[#7ee787] rounded-full -left-[5px] top-3 shadow-[0_0_8px_rgba(126,231,135,0.6)]" aria-hidden="true"></div>
+                            
+                            <div class="flex items-center justify-between mb-1">
+                                <time datetime="2026-08-06" class="text-[#8b949e] font-terminal text-xs">Aug 06, 2026</time>
+                                <a href="#log-2026-08-06" aria-label="Permalink to update on Aug 06, 2026" class="text-[#30363d] group-hover:text-[#79c0ff] transition-colors font-terminal text-sm">#</a>
+                            </div>
+                            
+                            <h3 class="text-lg text-white font-bold mb-2 font-terminal">Hello World: Site Launch</h3>
+                            <div class="text-[#c9d1d9] text-sm leading-relaxed space-y-2">
+                                <p>Bootstrapping my new personal and professional home on the web. This space will serve as a central hub for Helm updates, Guilty Party announcements, and future projects.</p>
+                            </div>
+                        </article>
+
+                        <!-- Update Item 2 (Placeholder example) -->
+                        <article id="log-2026-08-04" class="relative pl-6 border-l border-[#30363d] group transition-colors p-2 -ml-2 rounded-r-md">
+                            <div class="absolute w-2.5 h-2.5 bg-[#30363d] group-hover:bg-[#8b949e] transition-colors rounded-full -left-[5px] top-3" aria-hidden="true"></div>
+                            
+                            <div class="flex items-center justify-between mb-1">
+                                <time datetime="2026-08-04" class="text-[#8b949e] font-terminal text-xs">Aug 04, 2026</time>
+                                <a href="#log-2026-08-04" aria-label="Permalink to update on Aug 04, 2026" class="text-[#30363d] group-hover:text-[#79c0ff] transition-colors font-terminal text-sm">#</a>
+                            </div>
+                            
+                            <h3 class="text-lg text-white font-bold mb-2 font-terminal">Guilty Party Platform</h3>
+                            <div class="text-[#c9d1d9] text-sm leading-relaxed space-y-2">
+                                <p>Initiated repository and began laying the groundwork for the core narrative state engine for Guilty Party.</p>
+                            </div>
+                        </article>
+
+                        <!-- Update Item 3 (Placeholder example) -->
+                        <article id="log-2026-02-11" class="relative pl-6 border-l border-[#30363d] group transition-colors p-2 -ml-2 rounded-r-md">
+                            <div class="absolute w-2.5 h-2.5 bg-[#30363d] group-hover:bg-[#8b949e] transition-colors rounded-full -left-[5px] top-3" aria-hidden="true"></div>
+                            
+                            <div class="flex items-center justify-between mb-1">
+                                <time datetime="2026-02-11" class="text-[#8b949e] font-terminal text-xs">Feb 11, 2026</time>
+                                <a href="#log-2026-02-11" aria-label="Permalink to update on Feb 11, 2026" class="text-[#30363d] group-hover:text-[#79c0ff] transition-colors font-terminal text-sm">#</a>
+                            </div>
+                            
+                            <h3 class="text-lg text-white font-bold mb-2 font-terminal">Helm Initial Commit</h3>
+                            <div class="text-[#c9d1d9] text-sm leading-relaxed space-y-2">
+                                <p>The journey begins. Starting work on a truly deterministic package management UI for macOS.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-[#30363d] text-center font-terminal text-xs text-[#8b949e]" aria-hidden="true">
+                        [End of Log]
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#010409] border-t border-[#30363d] py-12 font-terminal">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-[#8b949e] text-sm text-center md:text-left">
+                &copy; 2026 Jason Cavinder. All rights reserved.<br>
+                <span class="opacity-75">Software Engineer & Actor in Honolulu, HI.</span>
+            </div>
+            <nav class="flex flex-wrap justify-center gap-6 text-sm" aria-label="Footer Navigation">
+                <a href="https://github.com/jasoncavinder" target="_blank" rel="noopener noreferrer" class="text-[#8b949e] hover:text-white transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/jason-cavinder/" target="_blank" rel="noopener noreferrer" class="text-[#8b949e] hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://x.com/jasoncavinder" target="_blank" rel="noopener noreferrer" class="text-[#8b949e] hover:text-white transition-colors">X (Twitter)</a>
+                <a href="https://www.instagram.com/jason_the_boat_guy/" target="_blank" rel="noopener noreferrer" class="text-[#8b949e] hover:text-white transition-colors">Instagram</a>
+                <a href="https://github.com/sponsors/jasoncavinder" target="_blank" rel="noopener noreferrer" class="text-[#7ee787] hover:text-white transition-colors">Sponsor my work</a>
+            </nav>
+        </div>
+    </footer>
+
 </body>
 </html>
